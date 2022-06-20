@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slick Slide</title>
+  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<style>
+    .visual {position:relative;}
+    .visual img {width: 350px; height: 300px;}
+    .visual button {position: absolute; z-index:10; top:50%; transform: translateY(-50%); width:71px; height:71px; border-radius: 100%; background: rgba(0,0,0,.5); border: none;}
+    .visual button:before {font-family: 'xeicon'; color: #fff; font-size: 45px;}
+    .visual button.slick-prev {left:50px; font-size: 0; color: transparent;}
+    .visual button.slick-prev::before {content: "/e93d"; font-family: 'xeicon';}
+    .visual button.slick-next {right:50px; font-size: 0; color: transparent;}
+    .visual button.slick-next::before {content: "/e940"; font-family: 'xeicon';}
+  </style>
+</head>
+<body>
+
+  <section class="visual">
+    <div>
+      <img src="./image/1440_900_20121020123636760191.jpg" alt="">
+    </div>
+    <div>
+      <img src="./image/1517451241.jpg" alt="">
+    </div>
+    <div>
+      <img src="./image/bistro-g4c6849637_1920.jpg" alt="">
+    </div>
+    <div>
+      <img src="./image/bulkkot-6.jpg" alt="">
+    </div>
+    <div>
+      <img src="./image/candle-g840b3777f_1920.jpg">
+    </div>
+    <div>
+      <img src="./image/osaka-yodogawa-fireworks-218191.jpg" alt="">
+    </div>
+  </section>
+
+  <script type="text/javascript">
+      $('.visual').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+  </script>
+</body>
+</html>
